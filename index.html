@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Vue Calculate Product</title>
+</head>
+<body>
+  <div id="vue-test" class="container">
+    <ul class="tabs-choos">
+      <li @click="activeTab = '1'" :class="[activeTab === '1' ? 'active' : '']" >Tab One</li>
+      <li @click="activeTab = '2'" :class="[activeTab === '2' ? 'active' : '']" >Tab Two</li>
+      <li @click="activeTab = '3'" :class="[activeTab === '3' ? 'active' : '']" >Tab Three</li>
+      <li @click="activeTab = '4'" :class="[activeTab === '4' ? 'active' : '']" >Tab Four</li>
+    </ul>
+    <div class="tabs-content">
+      <div class="content" v-if="activeTab === '1'">Content One</div>
+      <div class="content" v-if="activeTab === '2'">Content Two</div>
+      <div class="content" v-if="activeTab === '3'">Content Three</div>
+      <div class="content" v-if="activeTab === '4'">Content Four</div>
+    </div>
+  </div>
+
+  <script src="js/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#vue-test',
+      data: {
+        activeTab: '1'
+      }
+    });
+  </script>
+</body>
+</html>

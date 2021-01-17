@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  width: 1200px;
+  margin: 20px auto;
+}
+.container .tabs-choos {
+  margin-bottom: 0;
+}
+.container .tabs-choos li {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #eee;
+  cursor: pointer;
+  opacity: 0.3;
+}
+.container .tabs-choos li.active {
+  opacity: 1;
+}
+.container .tabs-content {
+  background-color: #eee;
+  margin: 0 auto;
+  padding: 20px;
+}
